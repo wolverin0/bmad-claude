@@ -51,12 +51,18 @@ git clone https://github.com/yourusername/bmad-claude.git
 cd bmad-claude
 ```
 
-2. **Run the installer**
+2. **Set up environment (optional)**
+```bash
+cp .env.example .env
+# Edit .env to add your Gemini API key (only needed for advanced features)
+```
+
+3. **Run the installer**
 ```bash
 ./install.sh
 ```
 
-3. **Restart Claude Code** to activate hooks
+4. **Restart Claude Code** to activate hooks
 
 ## 🧪 Test the Installation
 
@@ -109,7 +115,26 @@ bmad-claude "Analyze user engagement metrics"
 
 ## 🔧 Configuration
 
+### Environment Variables
+
+The system works out-of-the-box without any API keys. However, for advanced features:
+
+1. **Copy the example environment file**:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Edit `.env` to add your keys** (optional):
+   ```env
+   # Only needed for Gemini MCP integration (optional)
+   GEMINI_API_KEY=your-gemini-api-key-here
+   ```
+
+3. **Get API keys**:
+   - Gemini: https://makersuite.google.com/app/apikey (free tier available)
+
 ### Settings Location
+- Environment config: `.env` (create from `.env.example`)
 - Project hooks: `.claude/settings.json`
 - Global hooks: `~/.claude/CLAUDE.md`
 - Hook scripts: `.claude/hooks/`

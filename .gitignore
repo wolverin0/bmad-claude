@@ -48,11 +48,13 @@ htmlcov/
 *.log
 /tmp/
 
-# API Keys - NEVER commit these!
+# API Keys and Environment - NEVER commit these!
 .env
-.env.local
+.env.*
+!.env.example
 *.key
 *_api_key*
+*_secret*
 
 # User-specific
 bmad-claude.log

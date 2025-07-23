@@ -301,6 +301,39 @@ EOF
     echo
 }
 
+setup_environment() {
+    echo -e "${BLUE}Setting up environment...${NC}"
+    
+    # Check if .env exists
+    if [ ! -f ".env" ] && [ -f ".env.example" ]; then
+        print_info "Creating .env from .env.example"
+        cp .env.example .env
+        
+        # Check if user wants to configure API key now
+        echo
+        read -p "Do you want to configure your Gemini API key now? (y/N): " -n 1 -r
+        echo
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            echo "Get your API key from: https://makersuite.google.com/app/apikey"
+            read -p "Enter your Gemini API key: " api_key
+            if [ ! -z "$api_key" ]; then
+                # Use sed to replace the placeholder
+                sed -i.bak "s/your-gemini-api-key-here/$api_key/" .env
+                rm .env.bak
+                print_success "API key configured"
+            else
+                print_info "You can configure it later in .env file"
+            fi
+        else
+            print_info "You can configure your API key later in .env file"
+        fi
+    elif [ -f ".env" ]; then
+        print_success "Environment file already exists"
+    fi
+    
+    echo
+}
+
 install_cli_tools() {
     echo -e "${BLUE}Installing CLI tools...${NC}"
     
@@ -422,6 +455,7 @@ main() {
     print_header
     check_requirements
     create_directories
+    setup_environment
     install_hook
     configure_claude
     install_cli_tools

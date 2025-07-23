@@ -1,0 +1,31 @@
+{
+  "name": "bmad-method-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for automatically applying BMAD Method personas to prompts",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build"
+  },
+  "bin": {
+    "bmad-mcp-server": "build/index.js"
+  },
+  "keywords": ["mcp", "bmad", "ai", "prompting", "claude", "gemini"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

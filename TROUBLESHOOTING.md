@@ -174,7 +174,7 @@ python3 -m json.tool .claude/settings.json
 
 ```bash
 # Complete reinstall
-curl -sSL https://raw.githubusercontent.com/yourusername/bmad-claude/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/wolverin0/bmad-claude/main/install.sh | bash
 
 # Reset configuration
 rm -rf ~/.claude/hooks/bmad_*
@@ -187,7 +187,7 @@ bmad-test "your prompt here"
 
 ## Still Having Issues?
 
-1. **Check GitHub Issues**: https://github.com/yourusername/bmad-claude/issues
+1. **Check GitHub Issues**: https://github.com/wolverin0/bmad-claude/issues
 2. **Enable debug mode** and collect logs
 3. **Run test suite** and note which tests fail
 4. **Create issue** with:

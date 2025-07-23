@@ -35,19 +35,19 @@ Automatically enhance your Claude Code prompts with specialized AI personas usin
 ### One-Line Installation
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/bmad-claude/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/wolverin0/bmad-claude/main/install.sh | bash
 ```
 
 Or with wget:
 ```bash
-wget -qO- https://raw.githubusercontent.com/yourusername/bmad-claude/main/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/wolverin0/bmad-claude/main/install.sh | bash
 ```
 
 ### Manual Installation
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/bmad-claude.git
+git clone https://github.com/wolverin0/bmad-claude.git
 cd bmad-claude
 ```
 

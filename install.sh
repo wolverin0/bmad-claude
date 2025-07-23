@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 INSTALL_DIR="$HOME/.bmad-claude"
 CLAUDE_DIR="$HOME/.claude"
 BIN_DIR="$HOME/bin"
-REPO_URL="https://github.com/yourusername/bmad-claude.git"
+REPO_URL="https://github.com/wolverin0/bmad-claude.git"
 
 # Functions
 print_header() {

@@ -1,0 +1,26 @@
+# Claude Code specific
+.claude/logs/
+.claude/schedules/
+.claude/settings.local.json
+.claude/context/*
+.claude/test-reports/*
+.claude/agent-analytics/*
+
+# Temporary files
+*.tmp
+*.log
+*.cache
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Archives
+*.rar
+*.zip
+*.tar.gz
+
+# Keep empty directories with .gitkeep
+!.claude/context/.gitkeep
+!.claude/test-reports/.gitkeep
+!.claude/agent-analytics/.gitkeep
